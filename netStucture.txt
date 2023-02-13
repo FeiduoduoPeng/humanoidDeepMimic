@@ -1,0 +1,40 @@
+FullyConnectedNetwork(
+  (_logits): SlimFC(
+    (_model): Sequential(
+      (0): Linear(in_features=512, out_features=56, bias=True)
+    )
+  )
+  (_hidden_layers): Sequential(
+    (0): SlimFC(
+      (_model): Sequential(
+        (0): Linear(in_features=75, out_features=1024, bias=True)
+        (1): ReLU()
+      )
+    )
+    (1): SlimFC(
+      (_model): Sequential(
+        (0): Linear(in_features=1024, out_features=512, bias=True)
+        (1): ReLU()
+      )
+    )
+  )
+  (_value_branch_separate): Sequential(
+    (0): SlimFC(
+      (_model): Sequential(
+        (0): Linear(in_features=75, out_features=1024, bias=True)
+        (1): ReLU()
+      )
+    )
+    (1): SlimFC(
+      (_model): Sequential(
+        (0): Linear(in_features=1024, out_features=512, bias=True)
+        (1): ReLU()
+      )
+    )
+  )
+  (_value_branch): SlimFC(
+    (_model): Sequential(
+      (0): Linear(in_features=512, out_features=1, bias=True)
+    )
+  )
+)
